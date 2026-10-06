@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="tarjeta" id="tarjeta">
+    <form id="formLogin" novalidate>
+        <label for="usuario">usuario:</label>
+        <input type="text" id="usuario" autocomplete="username">
+        <p class="error oculto" id="errorUsuario"></p>
+
+        <label for="password">contraseña:</label>
+        <input type="password" id="password" autocomplete="current-password">
+        <p class="error oculto" id="errorPassword"></p>
+
+        <button type="submit" class="btn">iniciar sesión</button>
+        <a href="#" id="olvide">olvidé mi contraseña</a>
+    </form>
+</main>
+
+<div class="fondo oculto" id="fondo">
+    <div class="ventana" role="dialog" aria-modal="true" aria-labelledby="labelCorreo">
+        <button type="button" class="cerrar" id="cerrar" aria-label="Cerrar">&times;</button>
+        <label for="correo" id="labelCorreo">Escribe tu correo electrónico:</label>
+        <input type="text" id="correo" autocomplete="email">
+        <p class="error oculto" id="errorCorreo"></p>
+        <p class="nota">Se te enviará un link para restablecer tu contraseña</p>
+        <button type="button" class="btn" id="restablecer">Restablecer contraseña</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
